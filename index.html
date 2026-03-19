@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sladka — AI Growth Consultancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-brand">SLADKA</div>
+    <div class="loader-track">
+      <div id="loader-bar"></div>
+    </div>
+    <div id="loader-percent">0%</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <nav>
+      <a href="#" class="logo">
+        <img src="brand_assets/Sladka logo only.png" alt="Sladka" class="logo-img">
+        <span class="logo-wordmark">SLADKA</span>
+      </a>
+      <div class="nav-links">
+        <a href="#">Approach</a>
+        <a href="#">Work</a>
+        <a href="#" class="nav-cta">Start a conversation</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero (standalone 100vh, black bg) -->
+  <section class="hero-standalone" id="hero">
+    <div class="hero-inner">
+      <span class="hero-label">AI Growth Consultancy</span>
+      <h1 class="hero-heading">
+        <span class="word">Intelligence</span>
+        <span class="word">that</span>
+        <span class="word">scales.</span>
+      </h1>
+      <p class="hero-tagline">
+        Helping businesses grow using AI,<br>strategy, and intelligent systems.
+      </p>
+    </div>
+    <div class="scroll-hint">
+      <span class="scroll-hint-label">Scroll</span>
+      <div class="scroll-hint-line"></div>
+    </div>
+  </section>
+
+  <!-- Canvas (fixed, full viewport, starts hidden) -->
+  <div class="canvas-wrap" id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- Dark overlay (for stats section) -->
+  <div id="dark-overlay"></div>
+
+  <!-- Marquee (fixed, visible mid-scroll) -->
+  <div class="marquee-wrap" id="marquee">
+    <div class="marquee-text">
+      Consulting &nbsp;·&nbsp; Strategy &nbsp;·&nbsp; Systems &nbsp;·&nbsp; Implementation &nbsp;·&nbsp; AI &nbsp;·&nbsp; Growth &nbsp;·&nbsp; Consulting &nbsp;·&nbsp; Strategy &nbsp;·&nbsp; Systems &nbsp;·&nbsp;
+    </div>
+  </div>
+
+  <!-- Scroll container — all sections inside are position: fixed, driven by this height -->
+  <div id="scroll-container">
+
+    <!-- Section 1 — Approach -->
+    <section class="scroll-section align-left"
+             data-enter="8" data-leave="27" data-animation="slide-left">
+      <div class="section-inner">
+        <span class="section-label">001 / Approach</span>
+        <h2 class="section-heading">Strategy first.<br>Systems second.</h2>
+        <p class="section-body">We advise before we build. Every engagement begins with a clear growth strategy — then we design the systems to execute it with precision.</p>
+      </div>
+    </section>
+
+    <!-- Section 2 — Intelligence -->
+    <section class="scroll-section align-right"
+             data-enter="29" data-leave="46" data-animation="slide-right">
+      <div class="section-inner">
+        <span class="section-label">002 / Intelligence</span>
+        <h2 class="section-heading">AI built for<br>your business.</h2>
+        <p class="section-body">We design and implement AI systems that fit your operations — not generic tools bolted onto existing processes. Built specific. Built to last.</p>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="scroll-section section-stats"
+             data-enter="50" data-leave="66" data-animation="stagger-up">
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-value-row">
+            <span class="stat-number" data-value="3" data-decimals="0">0</span>
+            <span class="stat-suffix">×</span>
+          </div>
+          <span class="stat-label">Average ROI</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-value-row">
+            <span class="stat-number" data-value="40" data-decimals="0">0</span>
+            <span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Businesses scaled</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-value-row">
+            <span class="stat-number" data-value="12" data-decimals="0">0</span>
+            <span class="stat-suffix">wk</span>
+          </div>
+          <span class="stat-label">Average engagement</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 — Execution -->
+    <section class="scroll-section align-left"
+             data-enter="68" data-leave="82" data-animation="scale-up">
+      <div class="section-inner">
+        <span class="section-label">003 / Execution</span>
+        <h2 class="section-heading">From strategy<br>to execution.</h2>
+        <p class="section-body">We handle the full cycle — strategic advisory, AI system design, and technical implementation. One firm, fully accountable, end-to-end.</p>
+      </div>
+    </section>
+
+    <!-- CTA (persists) -->
+    <section class="scroll-section section-cta"
+             data-enter="84" data-leave="100" data-animation="fade-up" data-persist="true">
+      <div class="section-inner cta-inner">
+        <span class="section-label">Start here</span>
+        <h2 class="section-heading cta-heading">Ready to build<br>something smarter?</h2>
+        <p class="section-body">Let's assess your business and identify where AI can drive measurable, compounding growth.</p>
+        <a href="#" class="cta-button">Book a consultation</a>
+      </div>
+    </section>
+
+  </div><!-- /scroll-container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
