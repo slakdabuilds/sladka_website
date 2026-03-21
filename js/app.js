@@ -3,7 +3,7 @@
    Scroll-driven canvas + GSAP animations
 ───────────────────────────────────────────── */
 
-const FRAME_COUNT = 192;
+const FRAME_COUNT = 121;
 const FRAME_SPEED = 2.0; // product animation finishes at ~50% scroll
 
 // DOM refs
