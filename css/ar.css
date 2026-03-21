@@ -78,6 +78,10 @@
 [dir="rtl"] .cta-inner {
   text-align: right;
 }
+[dir="rtl"] .cta-button-outline {
+  margin-left: 0;
+  margin-right: 1rem;
+}
 
 /* ── MARQUEE — keep LTR scrolling ── */
 [dir="rtl"] .marquee-text {
