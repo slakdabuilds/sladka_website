@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Sladka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/work.css">
+</head>
+<body class="work-page">
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="brand_assets/Sladka logo only.png" alt="Sladka" class="logo-img">
+        <span class="logo-wordmark">SLADKA</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#approach">Approach</a>
+        <a href="work.html" class="nav-active">Work</a>
+        <a href="ar/work.html" class="lang-toggle">عربي</a>
+        <button class="nav-cta cal-trigger" data-cal-namespace="30min" data-cal-link="sladka/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book a Call</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="work-header">
+    <div class="work-header-inner">
+      <span class="work-eyebrow">Selected work</span>
+      <h1 class="work-title">Results,<br>not<br>promises.</h1>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <main class="work-cases">
+
+    <!-- 01 — ALROZNAH -->
+    <article class="case" id="case-alroznah">
+      <div class="case-image-wrap">
+        <img src="work_assets/alroznah.jpg" alt="ALROZNAH — traditional restaurant" class="case-image">
+        <div class="case-number">01</div>
+      </div>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="case-industry">Hospitality · Food & Beverage</span>
+        </div>
+        <h2 class="case-name">ALROZNAH</h2>
+        <p class="case-tagline">From a traditional restaurant<br>to an experience.</p>
+        <p class="case-body">We rebuilt their growth infrastructure with AI-driven systems and a sharper brand strategy — turning a beloved local restaurant into a scalable experience.</p>
+        <div class="case-tags">
+          <span>Brand Strategy</span>
+          <span>Growth Systems</span>
+          <span>AI Automation</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="case-divider"></div>
+
+    <!-- 02 — SILCCA SALON -->
+    <article class="case case-reverse" id="case-silcca">
+      <div class="case-image-wrap">
+        <img src="work_assets/silcca.jpg" alt="SILCCA SALON — nail salon" class="case-image">
+        <div class="case-number">02</div>
+      </div>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="case-industry">Beauty · Wellness</span>
+        </div>
+        <h2 class="case-name">SILCCA SALON</h2>
+        <p class="case-tagline">Consistent direction<br>focused on results.</p>
+        <p class="case-body">We implemented a full client acquisition and retention stack — automated booking flows and a content strategy that compounded their brand presence month over month.</p>
+        <div class="case-tags">
+          <span>Client Acquisition</span>
+          <span>Retention Systems</span>
+          <span>Content Strategy</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="case-divider"></div>
+
+    <!-- 03 — SLADKA FIELD -->
+    <article class="case" id="case-sladkafield">
+      <div class="case-image-wrap">
+        <img src="work_assets/sladka-field.jpg" alt="SLADKA FIELD — brand visuals" class="case-image">
+        <div class="case-number">03</div>
+      </div>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="case-industry">Fashion · Brand</span>
+        </div>
+        <h2 class="case-name">SLADKA FIELD</h2>
+        <p class="case-tagline">Translating brand attitude<br>into product visuals.</p>
+        <p class="case-body">We developed the visual language, directed the campaign, and built the distribution systems to ensure the right people saw it at the right moment.</p>
+        <div class="case-tags">
+          <span>Visual Direction</span>
+          <span>Campaign Strategy</span>
+          <span>Distribution</span>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- CTA -->
+  <section class="work-cta">
+    <div class="work-cta-inner">
+      <span class="work-eyebrow">Next step</span>
+      <h2 class="work-cta-heading">Your business<br>could be next.</h2>
+      <button class="cta-button cal-trigger" data-cal-namespace="30min" data-cal-link="sladka/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book a Call</button>
+    </div>
+  </section>
+
+  <!-- Cal.com embed -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+        if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["-", namespace, api]); } else p(cal, ar); return; }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "30min", { origin: "https://cal.com" });
+    Cal.ns["30min"]("ui", {
+      "cssVarsPerTheme": { "light": { "cal-brand": "#91AAA0" }, "dark": { "cal-brand": "#91AAA0" } },
+      "hideEventTypeDetails": false,
+      "layout": "month_view"
+    });
+  </script>
+
+</body>
+</html>

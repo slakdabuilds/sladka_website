@@ -1,0 +1,102 @@
+/* ─────────────────────────────────────────────
+   SLADKA — Arabic / RTL Overrides
+   Font: Cairo (closest to Madani available via CDN)
+───────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+[dir="rtl"] {
+  --font: 'Cairo', sans-serif;
+}
+
+[dir="rtl"] body {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* ── NAV ── */
+[dir="rtl"] .site-header nav {
+  direction: rtl;
+}
+[dir="rtl"] .logo {
+  flex-direction: row-reverse;
+}
+
+/* ── HERO ── */
+[dir="rtl"] .hero-standalone {
+  align-items: flex-end;
+  padding: 0 7vw;
+}
+[dir="rtl"] .hero-inner {
+  text-align: right;
+}
+[dir="rtl"] .hero-heading {
+  text-align: right;
+}
+[dir="rtl"] .hero-tagline {
+  text-align: right;
+}
+[dir="rtl"] .scroll-hint {
+  left: auto;
+  right: 7vw;
+  align-items: flex-end;
+}
+
+/* ── SCROLL SECTIONS — swap side zones ── */
+[dir="rtl"] .align-left {
+  padding-right: 7vw;
+  padding-left: 52vw;
+}
+[dir="rtl"] .align-right {
+  padding-left: 7vw;
+  padding-right: 52vw;
+}
+[dir="rtl"] .align-left .section-inner,
+[dir="rtl"] .align-right .section-inner {
+  text-align: right;
+}
+
+/* ── SECTION INNER border flips ── */
+[dir="rtl"] .section-inner {
+  padding-left: 0;
+  padding-right: 1.25rem;
+  border-left: none;
+  border-right: 1px solid rgba(145, 170, 160, 0.25);
+}
+
+/* ── STATS ── */
+[dir="rtl"] .stats-row {
+  direction: rtl;
+}
+[dir="rtl"] .stat {
+  align-items: flex-end;
+}
+[dir="rtl"] .stat-value-row {
+  flex-direction: row-reverse;
+}
+
+/* ── CTA ── */
+[dir="rtl"] .cta-inner {
+  text-align: right;
+}
+
+/* ── MARQUEE — keep LTR scrolling ── */
+[dir="rtl"] .marquee-text {
+  direction: ltr;
+}
+
+/* ── LANGUAGE TOGGLE ── */
+.lang-toggle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(240, 237, 232, 0.35);
+  text-decoration: none;
+  transition: color 0.25s ease;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+.lang-toggle:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.2);
+}

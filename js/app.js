@@ -46,27 +46,25 @@ function drawFrame(index) {
   if (!img) return;
   const cw = window.innerWidth;
   const ch = window.innerHeight;
+  const mirror = window.VIDEO_MIRROR === true;
 
   // Always fill entire canvas pure black
   ctx.fillStyle = '#000000';
   ctx.fillRect(0, 0, cw, ch);
 
-  const zoneLeft  = Math.floor(cw * VIDEO_START_X);
-  const zoneWidth = cw - zoneLeft;
+  // Mirror = video on LEFT 2/3 (Arabic), normal = video on RIGHT 2/3 (English)
+  const zoneLeft  = mirror ? 0 : Math.floor(cw * VIDEO_START_X);
+  const zoneWidth = mirror ? Math.floor(cw * (1 - VIDEO_START_X)) : cw - Math.floor(cw * VIDEO_START_X);
+  const zoneRight = zoneLeft + zoneWidth;
 
   const iw = img.naturalWidth;
   const ih = img.naturalHeight;
-
-  // Scale to fully cover the right zone (cover, not contain)
   const scale = Math.max(zoneWidth / iw, ch / ih);
   const dw = iw * scale;
   const dh = ih * scale;
-
-  // Center the image within the zone horizontally and vertically
   const dx = zoneLeft + (zoneWidth - dw) / 2;
   const dy = (ch - dh) / 2;
 
-  // Clip drawing to right zone so video never bleeds into text area
   ctx.save();
   ctx.beginPath();
   ctx.rect(zoneLeft, 0, zoneWidth, ch);
@@ -74,13 +72,23 @@ function drawFrame(index) {
   ctx.drawImage(img, dx, dy, dw, dh);
   ctx.restore();
 
-  // Gradient fade: black → transparent, blends video left edge into black bg
-  const fadeWidth = Math.floor(cw * 0.12);
-  const grad = ctx.createLinearGradient(zoneLeft, 0, zoneLeft + fadeWidth, 0);
-  grad.addColorStop(0, 'rgba(0,0,0,1)');
-  grad.addColorStop(1, 'rgba(0,0,0,0)');
-  ctx.fillStyle = grad;
-  ctx.fillRect(zoneLeft, 0, fadeWidth, ch);
+  // Gradient fade on the edge that faces the text zone
+  const fadeWidth = Math.floor(cw * 0.14);
+  if (mirror) {
+    // Fade right edge of video (video left, text right)
+    const grad = ctx.createLinearGradient(zoneRight - fadeWidth, 0, zoneRight, 0);
+    grad.addColorStop(0, 'rgba(0,0,0,0)');
+    grad.addColorStop(1, 'rgba(0,0,0,1)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(zoneRight - fadeWidth, 0, fadeWidth, ch);
+  } else {
+    // Fade left edge of video (video right, text left)
+    const grad = ctx.createLinearGradient(zoneLeft, 0, zoneLeft + fadeWidth, 0);
+    grad.addColorStop(0, 'rgba(0,0,0,1)');
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(zoneLeft, 0, fadeWidth, ch);
+  }
 }
 
 // ─── FRAME LOADING ──────────────────────────
@@ -97,7 +105,7 @@ function loadFrame(index) {
       resolve();
     };
     img.onerror = () => { loadedCount++; resolve(); };
-    img.src = `frames/frame_${String(index + 1).padStart(4, '0')}.webp`;
+    img.src = `${window.FRAMES_PATH || 'frames/'}frame_${String(index + 1).padStart(4, '0')}.webp`;
   });
 }
 
@@ -216,10 +224,10 @@ function initHeroTransition() {
       const p = self.progress;
 
       // Hero fades out fast as scroll starts
-      heroEl.style.opacity = Math.max(0, 1 - p * 22).toString();
+      heroEl.style.opacity = Math.max(0, 1 - p * 30).toString();
 
-      // Canvas expands from circle
-      const wipe = Math.min(1, Math.max(0, (p - 0.01) / 0.08));
+      // Canvas expands from circle — completes quickly (by p=0.04)
+      const wipe = Math.min(1, Math.max(0, p / 0.04));
       const radius = wipe * 80;
       canvasWrap.style.clipPath = `circle(${radius}% at 50% 50%)`;
     },
@@ -377,7 +385,8 @@ function initCounters() {
       onUpdate: (self) => {
         const p = self.progress;
         // stats section: enter 0.50, leave 0.66
-        if (p >= 0.50 && p <= 0.66 && parseFloat(el.textContent) < target) {
+        if (p >= 0.50 && p <= 0.66 && parseFloat(el.textContent) < target && !el.dataset.counted) {
+          el.dataset.counted = 'true';
           gsap.to(obj, {
             val: target,
             duration: 2,

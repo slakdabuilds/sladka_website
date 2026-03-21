@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sladka — AI Growth Consultancy</title>
+  <title>سلادكا — استشارات النمو بالذكاء الاصطناعي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ar.css">
 </head>
 <body>
 
@@ -23,73 +24,72 @@
   <!-- Header -->
   <header class="site-header" id="site-header">
     <nav>
-      <a href="#" class="logo">
-        <img src="brand_assets/Sladka logo only.png" alt="Sladka" class="logo-img">
+      <a href="../index.html" class="logo">
+        <img src="../brand_assets/Sladka logo only.png" alt="سلادكا" class="logo-img">
         <span class="logo-wordmark">SLADKA</span>
       </a>
       <div class="nav-links">
-        <a href="#">Approach</a>
-        <a href="work.html">Work</a>
-        <a href="ar/index.html" class="lang-toggle">عربي</a>
-        <button class="nav-cta cal-trigger" data-cal-namespace="30min" data-cal-link="sladka/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book a Call</button>
+        <a href="#">النهج</a>
+        <a href="work.html">الأعمال</a>
+        <a href="../index.html" class="lang-toggle">EN</a>
+        <button class="nav-cta cal-trigger" data-cal-namespace="30min" data-cal-link="sladka/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>احجز مكالمة</button>
       </div>
     </nav>
   </header>
 
-  <!-- Hero (standalone 70vh, black bg) -->
+  <!-- Hero -->
   <section class="hero-standalone" id="hero">
     <div class="hero-inner">
-      <span class="hero-label">AI Growth Consultancy</span>
+      <span class="hero-label">استشارات النمو بالذكاء الاصطناعي</span>
       <h1 class="hero-heading">
-        <span class="word">Intelligence</span>
-        <span class="word">that</span>
-        <span class="word">scales.</span>
+        <span class="word">ذكاء</span>
+        <span class="word">يتوسّع.</span>
       </h1>
       <p class="hero-tagline">
-        Helping businesses grow using AI,<br>strategy, and intelligent systems.
+        نساعد الشركات على النمو باستخدام<br>الذكاء الاصطناعي والاستراتيجية والأنظمة الذكية.
       </p>
       <div class="scroll-hint">
-        <span class="scroll-hint-label">Scroll</span>
+        <span class="scroll-hint-label">مرر</span>
         <div class="scroll-hint-line"></div>
       </div>
     </div>
   </section>
 
-  <!-- Canvas (fixed, full viewport, starts hidden) -->
+  <!-- Canvas -->
   <div class="canvas-wrap" id="canvas-wrap">
     <canvas id="canvas"></canvas>
   </div>
 
-  <!-- Dark overlay (for stats section) -->
+  <!-- Dark overlay -->
   <div id="dark-overlay"></div>
 
-  <!-- Marquee (fixed, visible mid-scroll) -->
+  <!-- Marquee -->
   <div class="marquee-wrap" id="marquee">
     <div class="marquee-text">
       Consulting &nbsp;·&nbsp; Strategy &nbsp;·&nbsp; Systems &nbsp;·&nbsp; Implementation &nbsp;·&nbsp; AI &nbsp;·&nbsp; Growth &nbsp;·&nbsp; Consulting &nbsp;·&nbsp; Strategy &nbsp;·&nbsp; Systems &nbsp;·&nbsp;
     </div>
   </div>
 
-  <!-- Scroll container — all sections inside are position: fixed, driven by this height -->
+  <!-- Scroll container -->
   <div id="scroll-container">
 
-    <!-- Section 1 — Approach -->
+    <!-- Section 1 — النهج -->
     <section class="scroll-section align-left"
              data-enter="8" data-leave="27" data-animation="slide-left">
       <div class="section-inner">
-        <span class="section-label">001 / Approach</span>
-        <h2 class="section-heading">Strategy first.<br>Systems second.</h2>
-        <p class="section-body">We advise before we build. Every engagement begins with a clear growth strategy — then we design the systems to execute it with precision.</p>
+        <span class="section-label">001 / النهج</span>
+        <h2 class="section-heading">الاستراتيجية أولاً.<br>الأنظمة ثانياً.</h2>
+        <p class="section-body">نستشير قبل أن نبني. كل مشروع يبدأ باستراتيجية نمو واضحة — ثم نصمم الأنظمة لتنفيذها بدقة.</p>
       </div>
     </section>
 
-    <!-- Section 2 — Intelligence -->
+    <!-- Section 2 — الذكاء -->
     <section class="scroll-section align-left"
              data-enter="29" data-leave="46" data-animation="slide-left">
       <div class="section-inner">
-        <span class="section-label">002 / Intelligence</span>
-        <h2 class="section-heading">AI built for<br>your business.</h2>
-        <p class="section-body">We design and implement AI systems that fit your operations — not generic tools bolted onto existing processes. Built specific. Built to last.</p>
+        <span class="section-label">002 / الذكاء</span>
+        <h2 class="section-heading">ذكاء اصطناعي<br>مصمّم لأعمالك.</h2>
+        <p class="section-body">نصمم وننفذ أنظمة ذكاء اصطناعي تناسب عملياتك — لا أدوات عامة. مصمّمة خصيصاً. مصمّمة للبقاء.</p>
       </div>
     </section>
 
@@ -102,7 +102,7 @@
             <span class="stat-number" data-value="8" data-decimals="0">0</span>
             <span class="stat-suffix">+</span>
           </div>
-          <span class="stat-label">Businesses supported</span>
+          <span class="stat-label">شراكت مدعومة</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
@@ -110,40 +110,40 @@
             <span class="stat-number" data-value="5" data-decimals="0">0</span>
             <span class="stat-suffix">+</span>
           </div>
-          <span class="stat-label">Years of design &amp; digital experience</span>
+          <span class="stat-label">سنوات من الخبرة الرقمية والتصميم</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat stat-text">
           <div class="stat-value-row">
-            <span class="stat-statement">Real Growth</span>
+            <span class="stat-statement">نمو حقيقي</span>
           </div>
-          <span class="stat-label">Not templates</span>
+          <span class="stat-label">لا قوالب جاهزة</span>
         </div>
       </div>
     </section>
 
-    <!-- Section 3 — Execution -->
+    <!-- Section 3 — التنفيذ -->
     <section class="scroll-section align-left"
              data-enter="68" data-leave="82" data-animation="scale-up">
       <div class="section-inner">
-        <span class="section-label">003 / Execution</span>
-        <h2 class="section-heading">From strategy<br>to execution.</h2>
-        <p class="section-body">We handle the full cycle — strategic advisory, AI system design, and technical implementation. One firm, fully accountable, end-to-end.</p>
+        <span class="section-label">003 / التنفيذ</span>
+        <h2 class="section-heading">من الاستراتيجية<br>إلى التنفيذ.</h2>
+        <p class="section-body">نتولى الدورة الكاملة — الاستشارة الاستراتيجية وتصميم أنظمة الذكاء الاصطناعي والتنفيذ التقني. شركة واحدة، مسؤولة بالكامل.</p>
       </div>
     </section>
 
-    <!-- CTA (persists) -->
+    <!-- CTA -->
     <section class="scroll-section section-cta"
              data-enter="84" data-leave="100" data-animation="fade-up" data-persist="true">
       <div class="section-inner cta-inner">
-        <span class="section-label">Start here</span>
-        <h2 class="section-heading cta-heading">Ready to build<br>something smarter?</h2>
-        <p class="section-body">Let's assess your business and identify where AI can drive measurable, compounding growth.</p>
-        <button class="cta-button cal-trigger" data-cal-namespace="30min" data-cal-link="sladka/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book a Call</button>
+        <span class="section-label">ابدأ هنا</span>
+        <h2 class="section-heading cta-heading">مستعد لبناء<br>شيء أذكى؟</h2>
+        <p class="section-body">دعنا نقيّم أعمالك ونحدد أين يمكن للذكاء الاصطناعي أن يحقق نمواً قابلاً للقياس.</p>
+        <button class="cta-button cal-trigger" data-cal-namespace="30min" data-cal-link="sladka/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>احجز مكالمة</button>
       </div>
     </section>
 
-  </div><!-- /scroll-container -->
+  </div>
 
   <!-- Cal.com embed -->
   <script type="text/javascript">
@@ -165,9 +165,10 @@
     });
   </script>
 
+  <script>window.FRAMES_PATH = '../frames/'; window.VIDEO_MIRROR = true;</script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="../js/app.js"></script>
 </body>
 </html>

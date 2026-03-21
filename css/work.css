@@ -1,0 +1,231 @@
+/* ─────────────────────────────────────────────
+   SLADKA — Work Page
+───────────────────────────────────────────── */
+
+.work-page {
+  background: #000;
+  min-height: 100vh;
+}
+
+/* Override scroll sections for work page */
+.work-page .scroll-section {
+  display: none;
+}
+
+/* ───────────────── NAV ACTIVE ───────────────── */
+
+.nav-active {
+  color: var(--text) !important;
+}
+
+/* ───────────────── PAGE HEADER ───────────────── */
+
+.work-header {
+  padding: 18vh 7vw 8vh;
+  border-bottom: 1px solid var(--divider);
+}
+
+.work-header-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 1400px;
+}
+
+.work-eyebrow {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.work-title {
+  font-size: clamp(4rem, 9vw, 9.5rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+/* ───────────────── CASE STUDIES ───────────────── */
+
+.work-cases {
+  padding: 0 7vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.case {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  align-items: center;
+  padding: 8vh 0;
+}
+
+.case-reverse {
+  direction: rtl;
+}
+
+.case-reverse > * {
+  direction: ltr;
+}
+
+/* Image */
+.case-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.case-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+  filter: brightness(0.92);
+}
+
+.case-image-wrap:hover .case-image {
+  transform: scale(1.04);
+  filter: brightness(1);
+}
+
+.case-number {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Content */
+.case-content {
+  padding: 2rem 0;
+}
+
+.case-meta {
+  margin-bottom: 1.5rem;
+}
+
+.case-industry {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.case-name {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.case-tagline {
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: rgba(240,237,232,0.65);
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(145,170,160,0.3);
+}
+
+.case-body {
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(240,237,232,0.45);
+  max-width: 38ch;
+  margin-bottom: 2rem;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-tags span {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(145,170,160,0.7);
+  border: 1px solid rgba(145,170,160,0.2);
+  padding: 0.35rem 0.85rem;
+  border-radius: 2px;
+}
+
+/* Divider */
+.case-divider {
+  height: 1px;
+  background: var(--divider);
+  margin: 0;
+}
+
+/* ───────────────── WORK CTA ───────────────── */
+
+.work-cta {
+  border-top: 1px solid var(--divider);
+  padding: 10vh 7vw 12vh;
+  margin-top: 4vh;
+}
+
+.work-cta-inner {
+  max-width: 640px;
+}
+
+.work-cta-heading {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  margin: 1.5rem 0 2.5rem;
+}
+
+/* ───────────────── MOBILE ───────────────── */
+
+@media (max-width: 768px) {
+  .work-header {
+    padding: 14vh 6vw 6vh;
+  }
+
+  .work-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .case {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 5vh 0;
+  }
+
+  .case-reverse {
+    direction: ltr;
+  }
+
+  .case-image-wrap {
+    aspect-ratio: 3 / 2;
+  }
+
+  .work-cases {
+    padding: 0 6vw;
+  }
+
+  .work-cta {
+    padding: 8vh 6vw 10vh;
+  }
+}
