@@ -74,9 +74,16 @@
   flex-direction: row-reverse;
 }
 
-/* ── CTA ── */
+/* ── CTA / WORD REVEAL ── */
 [dir="rtl"] .cta-inner {
   text-align: right;
+}
+[dir="rtl"] .word-reveal-text {
+  text-align: right;
+  direction: rtl;
+}
+[dir="rtl"] .word-reveal-buttons {
+  justify-content: flex-end;
 }
 [dir="rtl"] .cta-button-outline {
   margin-left: 0;

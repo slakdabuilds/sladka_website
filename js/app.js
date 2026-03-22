@@ -188,6 +188,9 @@ function initAnimations() {
 
   // Counter animations
   initCounters();
+
+  // Word-reveal CTA
+  initWordReveal();
 }
 
 // ─── FRAME SCROLL ───────────────────────────
@@ -294,6 +297,7 @@ function initMarquee() {
 
 function setupSectionAnimation(section) {
   const type    = section.dataset.animation;
+  if (type === 'word-reveal') return; // handled by initWordReveal
   const persist = section.dataset.persist === 'true';
   const enter   = parseFloat(section.dataset.enter) / 100;
   const leave   = parseFloat(section.dataset.leave) / 100;
@@ -396,6 +400,66 @@ function initCounters() {
         }
       },
     });
+  });
+}
+
+// ─── WORD REVEAL ────────────────────────────
+
+function initWordReveal() {
+  const section = document.querySelector('.section-word-reveal');
+  if (!section) return;
+
+  const enter   = parseFloat(section.dataset.enter) / 100;  // 0.84
+  const leave   = parseFloat(section.dataset.leave) / 100;  // 1.00
+  const words   = Array.from(section.querySelectorAll('.wr'));
+  const buttons = section.querySelector('.word-reveal-buttons');
+
+  if (!words.length) return;
+
+  gsap.set(section, { opacity: 0 });
+
+  ScrollTrigger.create({
+    trigger: scrollCont,
+    start: 'top top',
+    end: 'bottom bottom',
+    scrub: true,
+    onUpdate: (self) => {
+      const p = self.progress;
+
+      if (p >= enter) {
+        section.style.opacity = '1';
+        section.style.pointerEvents = 'auto';
+
+        // Progress within this section [0 → 1]
+        const sp = Math.min(1, (p - enter) / (leave - enter));
+
+        // Words light up over the first 80% of section scroll
+        const wordP  = Math.min(1, sp / 0.8);
+        const litPos = wordP * words.length;
+
+        words.forEach((w, i) => {
+          const dist = litPos - i;
+          if (dist >= 1) {
+            w.style.color = 'rgba(240,237,232,0.92)';
+          } else if (dist > 0) {
+            const alpha = (0.12 + dist * 0.80).toFixed(2);
+            w.style.color = `rgba(240,237,232,${alpha})`;
+          } else {
+            w.style.color = 'rgba(240,237,232,0.12)';
+          }
+        });
+
+        // Buttons fade in after words are done
+        if (buttons) {
+          const btnAlpha = Math.max(0, Math.min(1, (sp - 0.80) / 0.15));
+          buttons.style.opacity  = btnAlpha.toString();
+          buttons.style.pointerEvents = btnAlpha > 0.5 ? 'auto' : 'none';
+        }
+      } else {
+        section.style.opacity = '0';
+        section.style.pointerEvents = 'none';
+      }
+    },
   });
 }
 
