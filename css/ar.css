@@ -150,6 +150,16 @@
   align-items: flex-start;
 }
 
+/* ── WORK PAGE — case-reverse in RTL ── */
+/* In RTL, .case puts image on RIGHT (columns reversed).
+   .case-reverse should flip it: image on LEFT, text on RIGHT */
+[dir="rtl"] .case-reverse {
+  direction: ltr;
+}
+[dir="rtl"] .case-reverse > * {
+  direction: rtl;
+}
+
 /* ── MOBILE RTL FIXES ── */
 @media (max-width: 768px) {
   /* Remove desktop RTL side padding — let mobile styles handle it */
@@ -158,12 +168,14 @@
     padding: 0 6vw;
   }
 
-  /* Make backdrop box full-width in RTL */
+  /* RTL border flip */
   [dir="rtl"] .align-left .section-inner,
   [dir="rtl"] .align-right .section-inner {
     border-right: 1px solid rgba(145,170,160,0.2);
     border-left: none;
   }
+
+  /* Remove border-left default (applied by non-RTL rule) */
 
   /* Stack CTA buttons centered on mobile */
   [dir="rtl"] .cta-button-outline {

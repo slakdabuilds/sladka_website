@@ -180,13 +180,13 @@ body {
 .hero-standalone {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   background: #000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 7vw;
+  padding: 7rem 7vw 0;
   z-index: 2;
 }
 
@@ -498,6 +498,7 @@ canvas {
   justify-content: center;
   align-items: center;
   padding: 0 7vw;
+  background: rgba(0, 0, 0, 0.72);
 }
 
 .word-reveal-inner {
@@ -521,12 +522,20 @@ canvas {
 
 .word-reveal-buttons {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
   margin-top: 3rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+}
+
+/* Reset stray margins so both buttons sit on the same line */
+.word-reveal-buttons .cta-button,
+.word-reveal-buttons .cta-button-outline {
+  margin-top: 0;
+  display: inline-block;
 }
 
 .cta-button-outline {
@@ -568,9 +577,7 @@ canvas {
   .align-left .section-inner,
   .align-right .section-inner {
     max-width: 100%;
-    background: rgba(0, 0, 0, 0.78);
-    padding: 1.75rem;
-    backdrop-filter: blur(12px);
+    padding: 1.5rem;
     border-left: 1px solid rgba(145,170,160,0.2);
   }
 
