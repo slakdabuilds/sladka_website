@@ -150,6 +150,7 @@ body {
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 .nav-cta:hover {
@@ -658,8 +659,14 @@ canvas {
     padding: 1.5rem 5vw;
   }
 
-  .nav-approach {
+  .nav-approach,
+  .nav-projects {
     display: none;
+  }
+
+  .nav-cta {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.65rem;
   }
 
   .hero-heading {
