@@ -104,3 +104,62 @@
   color: var(--text);
   border-color: rgba(255,255,255,0.2);
 }
+
+/* ── LOGO WORDMARK in Arabic ── */
+[dir="rtl"] .logo-wordmark {
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+/* ── ARABIC LETTER-SPACING FIX ── */
+/* Arabic script breaks apart with letter-spacing — reset it */
+[dir="rtl"] .section-heading,
+[dir="rtl"] .section-label,
+[dir="rtl"] .section-body,
+[dir="rtl"] .stat-label,
+[dir="rtl"] .stat-statement,
+[dir="rtl"] .hero-tagline,
+[dir="rtl"] .hero-label,
+[dir="rtl"] .case-name,
+[dir="rtl"] .case-tagline,
+[dir="rtl"] .case-body,
+[dir="rtl"] .case-industry,
+[dir="rtl"] .case-tags span,
+[dir="rtl"] .work-title,
+[dir="rtl"] .work-eyebrow,
+[dir="rtl"] .work-cta-heading {
+  letter-spacing: 0;
+}
+
+/* ── SCROLL HINT — LEFT SIDE in Arabic ── */
+[dir="rtl"] .hero-standalone {
+  position: relative;
+}
+[dir="rtl"] .scroll-hint {
+  position: absolute;
+  left: 7vw;
+  right: auto;
+  bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+/* ── MOBILE RTL FIXES ── */
+@media (max-width: 768px) {
+  /* Remove desktop RTL side padding — let mobile styles handle it */
+  [dir="rtl"] .align-left,
+  [dir="rtl"] .align-right {
+    padding: 0 6vw;
+  }
+
+  /* Make backdrop box full-width in RTL */
+  [dir="rtl"] .align-left .section-inner,
+  [dir="rtl"] .align-right .section-inner {
+    border-right: 1px solid rgba(145,170,160,0.2);
+    border-left: none;
+  }
+
+  /* Stack CTA buttons centered on mobile */
+  [dir="rtl"] .cta-button-outline {
+    margin-right: 0;
+  }
+}

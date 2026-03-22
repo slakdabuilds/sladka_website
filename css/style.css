@@ -520,7 +520,11 @@ canvas {
 
 @media (max-width: 768px) {
   #scroll-container {
-    height: 600vh;
+    height: 500vh;
+  }
+
+  .hero-standalone {
+    height: 50vh;
   }
 
   .align-left,
@@ -560,7 +564,31 @@ canvas {
     display: none;
   }
 
-  .marquee-text {
-    font-size: 18vw;
+  /* Hide marquee on mobile */
+  .marquee-wrap {
+    display: none;
+  }
+
+  /* CTA section — center on mobile */
+  .section-cta {
+    padding: 0 8vw;
+  }
+
+  .cta-inner {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .cta-button,
+  .cta-button-outline {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .cta-button-outline {
+    margin-top: 1rem;
   }
 }
