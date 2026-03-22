@@ -178,7 +178,7 @@ function initAnimations() {
   initHeroTransition();
 
   // Dark overlay (covers stats section range)
-  initDarkOverlay(0.48, 0.68);
+  initDarkOverlay(0.66, 0.84);
 
   // Marquee
   initMarquee();
@@ -384,8 +384,8 @@ function initCounters() {
       end: 'bottom bottom',
       onUpdate: (self) => {
         const p = self.progress;
-        // stats section: enter 0.50, leave 0.66
-        if (p >= 0.50 && p <= 0.66 && parseFloat(el.textContent) < target && !el.dataset.counted) {
+        // stats section: enter 0.68, leave 0.82
+        if (p >= 0.68 && p <= 0.82 && parseFloat(el.textContent) < target && !el.dataset.counted) {
           el.dataset.counted = 'true';
           gsap.to(obj, {
             val: target,

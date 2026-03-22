@@ -523,10 +523,6 @@ canvas {
     height: 500vh;
   }
 
-  .hero-standalone {
-    height: 50vh;
-  }
-
   .align-left,
   .align-right {
     padding: 0 6vw;
@@ -545,7 +541,7 @@ canvas {
     padding: 1.5rem 5vw;
   }
 
-  .nav-links a:not(.nav-cta):not(.lang-toggle) {
+  .nav-approach {
     display: none;
   }
 
