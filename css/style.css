@@ -562,6 +562,79 @@ canvas {
   color: var(--text);
 }
 
+/* ───────────────── FOOTER ───────────────── */
+
+.site-footer {
+  background: #000;
+  border-top: 1px solid var(--divider);
+  padding: 5vh 7vw 4vh;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.footer-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: rgba(240,237,232,0.45);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  background: rgba(255,255,255,0.03);
+}
+
+.footer-icon-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(145,170,160,0.07);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.footer-logo-img {
+  height: 20px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+}
+
+.footer-brand-name {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  color: rgba(240,237,232,0.5);
+}
+
+.footer-copy {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: rgba(240,237,232,0.22);
+  line-height: 1.6;
+}
+
 /* ───────────────── MOBILE ───────────────── */
 
 @media (max-width: 768px) {
