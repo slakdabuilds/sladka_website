@@ -11,6 +11,7 @@
   --accent-dim:   rgba(145, 170, 160, 0.12);
   --divider:      rgba(255, 255, 255, 0.07);
   --font:         'Inter', sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
 }
 
 *, *::before, *::after {
@@ -107,8 +108,9 @@ body {
 .logo-img {
   height: 26px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+  /* Tint to brand sage teal #91AAA0 */
+  filter: brightness(0) saturate(100%) invert(68%) sepia(16%) saturate(453%) hue-rotate(116deg) brightness(93%) contrast(88%);
+  opacity: 1;
 }
 
 .logo-wordmark {
@@ -219,10 +221,11 @@ body {
 }
 
 .hero-heading {
+  font-family: var(--font-heading);
   font-size: clamp(4.5rem, 9.5vw, 10rem);
   font-weight: 800;
   line-height: 0.92;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   color: var(--text);
   margin-bottom: 2.5rem;
 }
@@ -375,10 +378,11 @@ canvas {
 }
 
 .section-heading {
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 3.8vw, 3.8rem);
   font-weight: 700;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--text);
   margin-bottom: 1.5rem;
 }
@@ -520,10 +524,11 @@ canvas {
 }
 
 .word-reveal-text {
+  font-family: var(--font-heading);
   font-size: clamp(1.9rem, 3.4vw, 4rem);
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--text);
 }
 
@@ -630,8 +635,8 @@ canvas {
 .footer-logo-img {
   height: 20px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.55;
+  filter: brightness(0) saturate(100%) invert(68%) sepia(16%) saturate(453%) hue-rotate(116deg) brightness(93%) contrast(88%);
+  opacity: 1;
 }
 
 .footer-brand-name {
