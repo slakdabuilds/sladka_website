@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English Home -->
+  <url>
+    <loc>https://sladka.com.sa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladka.com.sa/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sladka.com.sa/ar/"/>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- English Projects -->
+  <url>
+    <loc>https://sladka.com.sa/work.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladka.com.sa/work.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sladka.com.sa/ar/work.html"/>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Arabic Home -->
+  <url>
+    <loc>https://sladka.com.sa/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sladka.com.sa/ar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladka.com.sa/"/>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Arabic Projects -->
+  <url>
+    <loc>https://sladka.com.sa/ar/work.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sladka.com.sa/ar/work.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sladka.com.sa/work.html"/>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
