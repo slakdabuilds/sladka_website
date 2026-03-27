@@ -1,0 +1,524 @@
+/* ─────────────────────────────────────────────
+   SLADKA — Interior Pages (Services + Blog)
+   Shared styles for all service and article pages
+───────────────────────────────────────────── */
+
+/* ───────────────── INTERIOR PAGE BASE ───────────────── */
+
+.interior-page {
+  background: #000;
+  min-height: 100vh;
+}
+
+/* ───────────────── INTERIOR HERO ───────────────── */
+
+.interior-hero {
+  padding: 18vh 7vw 8vh;
+  border-bottom: 1px solid var(--divider);
+}
+
+.interior-hero-inner {
+  max-width: 860px;
+}
+
+.page-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.interior-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 5vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1.75rem;
+}
+
+.interior-lead {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-dim);
+  max-width: 560px;
+}
+
+/* ───────────────── INTERIOR CONTENT AREA ───────────────── */
+
+.interior-content {
+  padding: 8vh 7vw 10vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ───────────────── SERVICE GRID ───────────────── */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--divider);
+  border: 1px solid var(--divider);
+  margin-bottom: 10vh;
+}
+
+.service-card {
+  background: #000;
+  padding: 3rem 2.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.3s ease;
+  display: block;
+}
+
+.service-card:hover {
+  background: rgba(145,170,160,0.06);
+}
+
+.service-card-number {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: rgba(145,170,160,0.4);
+  margin-bottom: 2rem;
+}
+
+.service-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.service-card-body {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-dim);
+  max-width: 28ch;
+}
+
+.service-card-arrow {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: transform 0.25s ease;
+}
+
+.service-card:hover .service-card-arrow {
+  transform: translateX(6px);
+}
+
+/* ───────────────── SERVICE DETAIL PAGE ───────────────── */
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  align-items: start;
+  padding: 8vh 7vw 10vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-main h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+.service-main h2:first-child {
+  margin-top: 0;
+}
+
+.service-main p {
+  font-size: clamp(0.88rem, 1vw, 0.95rem);
+  line-height: 1.85;
+  color: rgba(240,237,232,0.55);
+  margin-bottom: 1.25rem;
+  max-width: 52ch;
+}
+
+.service-main ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.service-main ul li {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(240,237,232,0.55);
+  padding: 0.55rem 0;
+  padding-left: 1.25rem;
+  border-bottom: 1px solid var(--divider);
+  position: relative;
+}
+
+.service-main ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ───────────────── PROCESS STEPS ───────────────── */
+
+.process-steps {
+  padding: 6vh 0;
+  border-top: 1px solid var(--divider);
+}
+
+.process-steps-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 3rem;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+.process-step-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(145,170,160,0.15);
+  line-height: 1;
+}
+
+.process-step-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+.process-step-content p {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--text-dim);
+  max-width: 44ch;
+}
+
+/* ───────────────── BLOG INDEX ───────────────── */
+
+.blog-header {
+  padding: 18vh 7vw 8vh;
+  border-bottom: 1px solid var(--divider);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--divider);
+  border: 1px solid var(--divider);
+  margin: 0 7vw 10vh;
+}
+
+.blog-card {
+  background: #000;
+  padding: 2.75rem 2.25rem;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+}
+
+.blog-card:hover {
+  background: rgba(145,170,160,0.04);
+}
+
+.blog-card-cat {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.blog-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.blog-card-excerpt {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+  margin-bottom: 1.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-meta {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(145,170,160,0.5);
+}
+
+/* ───────────────── ARTICLE PAGE ───────────────── */
+
+.article-header {
+  padding: 18vh 7vw 6vh;
+  border-bottom: 1px solid var(--divider);
+  max-width: 900px;
+}
+
+.article-cat {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.article-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.article-meta {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(145,170,160,0.5);
+}
+
+.article-body {
+  padding: 6vh 7vw 10vh;
+  max-width: 760px;
+}
+
+.article-body p {
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  line-height: 1.9;
+  color: rgba(240,237,232,0.65);
+  margin-bottom: 1.75rem;
+}
+
+.article-body h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 3.5rem 0 1.25rem;
+  line-height: 1.2;
+}
+
+.article-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 2.5rem 0 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1.75rem;
+  padding-left: 1.5rem;
+}
+
+.article-body li {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: rgba(240,237,232,0.6);
+  margin-bottom: 0.5rem;
+}
+
+.article-body blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.article-body blockquote p {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-style: italic;
+  color: rgba(240,237,232,0.8);
+  margin-bottom: 0;
+}
+
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 3rem;
+  transition: gap 0.25s ease;
+}
+
+.article-back:hover {
+  gap: 0.75rem;
+}
+
+/* ───────────────── INTERIOR CTA ───────────────── */
+
+.interior-cta {
+  border-top: 1px solid var(--divider);
+  padding: 10vh 7vw 12vh;
+}
+
+.interior-cta-inner {
+  max-width: 640px;
+}
+
+.interior-cta .work-eyebrow {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.interior-cta-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 2.5rem;
+}
+
+/* ───────────────── BUTTONS ───────────────── */
+
+.cta-button {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: var(--accent);
+  color: #000;
+  font-family: var(--font);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.cta-button:hover {
+  opacity: 0.85;
+}
+
+/* ───────────────── MOBILE ───────────────── */
+
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .interior-hero {
+    padding: 14vh 6vw 6vh;
+  }
+
+  .interior-content {
+    padding: 6vh 6vw 8vh;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 6vh;
+  }
+
+  .service-detail {
+    grid-template-columns: 1fr;
+    gap: 4vh;
+    padding: 6vh 6vw 8vh;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    margin: 0 6vw 8vh;
+  }
+
+  .blog-header {
+    padding: 14vh 6vw 6vh;
+  }
+
+  .article-header {
+    padding: 14vh 6vw 4vh;
+  }
+
+  .article-body {
+    padding: 4vh 6vw 8vh;
+  }
+
+  .process-step {
+    grid-template-columns: 56px 1fr;
+    gap: 1.25rem;
+  }
+
+  .interior-cta {
+    padding: 8vh 6vw 10vh;
+  }
+
+  .service-card {
+    padding: 2.25rem 1.75rem;
+  }
+}

@@ -137,14 +137,18 @@ body {
 }
 
 .nav-approach,
-.nav-projects {
+.nav-projects,
+.nav-services,
+.nav-blog {
   padding: 0.4rem 0.85rem;
   border: 1px solid rgba(240,237,232,0.25);
   border-radius: 2px;
 }
 
 .nav-approach:hover,
-.nav-projects:hover {
+.nav-projects:hover,
+.nav-services:hover,
+.nav-blog:hover {
   color: var(--text);
   border-color: rgba(240,237,232,0.5);
 }
