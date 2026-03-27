@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"winget list --name ffmpeg 2>&1 | head -5\")",
+      "Bash(\"C:/Program Files/GitHub CLI/gh.exe\" repo create sladka_website --public --description \"Sladka AI Growth Consultancy — scroll-driven landing page\")"
+    ]
+  }
+}
